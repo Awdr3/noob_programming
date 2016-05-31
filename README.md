@@ -1,1 +1,3 @@
 # noob_programming
+
+## Ideias
