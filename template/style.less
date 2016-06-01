@@ -1,0 +1,118 @@
+// ------ Vars ------
+// Colors
+@accent: @blue;
+
+@white: #f5f4f9;
+@black: #333;
+
+@orange: #f3682b;
+@blue: #0c77b6;
+@yellow: #f3d43a;
+
+@html: @orange;
+@css: @blue;
+@js: @yellow;
+
+// Sizes
+@basefont: 14px;
+@baseline: @basefont * 1.5;
+
+a, a:link, a:visited, a:focus, a:hover, a:active{
+	color: inherit;
+	text-decoration: none;
+}
+
+p{
+	line-height: @baseline;
+	margin: 0;
+	margin-bottom: @baseline / 2;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Roboto Slab';
+	margin: 0;
+	margin-bottom: @baseline / 2;
+}
+
+html, body{
+	background: @white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: @basefont;
+	line-height: @baseline;
+}
+
+header{
+	nav{
+		background: #fff;
+		color: @black;
+		line-height: @baseline * 4;
+		padding: 0 (@baseline * 2);
+		box-shadow: 0 0 10px rgba(50,0,10,.1);
+		div{
+			display: inline-block;
+			width: auto;
+			&.menu{
+				float: right;
+			}
+			ul{
+				margin: 0; padding: 0;
+				li{
+					margin: 0; padding: 0;
+					list-style-type: none;
+					display: inline-block;
+					a{
+						line-height: @baseline * 4;
+						display: inline-block;
+						padding: 0 (@baseline / 2);
+					}
+				}
+			}
+		}
+	}
+}
+
+main{
+	section{
+		&.langs{
+			width: 60%;
+			margin: auto;
+			padding-top: @baseline * 2;
+			.langs{
+				margin: 0; padding: 0;
+				list-style-type: none;
+				li{
+					background: @accent;
+					color: @white;
+					height: @baseline * 5;
+					margin: 0;
+					margin-bottom: @baseline * 1.5;
+					overflow: auto;
+					border-radius: 6px;
+					box-sizing: border-box;
+					box-shadow: 0 10px 20px -15px rgba(50,0,50, .8);
+					.info{
+						display: inline-block;
+						width: 30%;
+						padding: @baseline / 2;
+						padding-bottom: 0;
+						box-sizing: border-box;
+						p{ margin-top: @baseline; }
+					}
+					.ace_editor, .editor{
+						border: none;
+						display: block;
+						float: right;
+						height: @baseline * 5; width: 50%;
+						margin: 0;
+						box-sizing: border-box;
+						margin-right: @baseline / 2;
+					}
+					&.html{ background: @html; }
+					&.css{ background: @css; }
+					&.js{ background: @js; }
+				}
+			}
+		}
+	}
+}
